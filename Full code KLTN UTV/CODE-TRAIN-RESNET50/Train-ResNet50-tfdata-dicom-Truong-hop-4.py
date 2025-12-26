@@ -50,8 +50,8 @@ img_size   = (224, 224)
 batch_size = 32
 epochs     = 100
 seed       = 11
-use_class_weight = False
-label_smoothing  = 0.0
+use_class_weight = False        # Bật/tắt cân bằng lớp
+label_smoothing = 0.0            # 0.0–0.02 nếu lệch lớp mạnh
 
 # Tuỳ chọn mixed precision nếu GPU hỗ trợ
 use_mixed_precision = False
@@ -438,3 +438,4 @@ with open(os.path.join(output_dir, "predictions.json"), "w", encoding="utf-8") a
     json.dump(pred_rows, f, ensure_ascii=False, indent=2)
 
 print(f"\n✅ Tất cả kết quả đã lưu trong: {output_dir}")
+
